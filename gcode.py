@@ -1,3 +1,4 @@
+#!/bin/python3
 import subprocess
 import sys
 
@@ -22,7 +23,7 @@ except ImportError:
     install_package("requests")
     import requests
     with open('assistant.py', 'w') as f:
-        f.write(str(requests.get("")))
+        f.write(str(requests.get("https://raw.githubusercontent.com/guest3301/MACP/refs/heads/main/assistant.py").text))
 
 def main():
     import argparse

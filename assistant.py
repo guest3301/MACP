@@ -13,7 +13,7 @@ class CodeGenerator:
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
-    def generate_code(self, input_text, max_length=1500):
+    def generate_code(self, input_text, max_length=150):
         """
         Generates code based on the input text prompt.
         Args:
@@ -47,5 +47,5 @@ if __name__ == "__main__":
     write a python program to check whether the user is above 18 age or not by taking prompt of age.
     """
     codegen = CodeGenerator()
-    generated_code = codegen.generate_code(input_text)
+    generated_code = codegen.generate_code(input_text + "(only use functions if its appropriate otherwise do without functions (line-by-line), not OOPs unless specified by the user.)")
     print(generated_code)
