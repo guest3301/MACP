@@ -13,7 +13,7 @@ class CodeGenerator:
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
-    def generate_code(self, input_text, max_length=150):
+    def generate_code(self, input_text, max_length=1500):
         """
         Generates code based on the input text prompt.
         Args:
